@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="NavigationBasics" duration-ms="8108" started-at="2018-06-15T22:03:58Z" finished-at="2018-06-15T22:04:06Z">
+    <groups>
+    </groups>
+    <test name="CreateFamily" duration-ms="8108" started-at="2018-06-15T22:03:58Z" finished-at="2018-06-15T22:04:06Z">
+      <class name="ameriStudent.test.Navigation">
+        <test-method status="PASS" signature="setupBeforeSuite()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupBeforeSuite" is-config="true" duration-ms="2728" started-at="2018-06-15T22:03:55Z" finished-at="2018-06-15T22:03:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeSuite -->
+        <test-method status="PASS" signature="setupBeforeTest()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupBeforeTest" is-config="true" duration-ms="5113" started-at="2018-06-15T22:03:58Z" finished-at="2018-06-15T22:04:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBeforeTest -->
+        <test-method status="PASS" signature="createFamily()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="createFamily" duration-ms="2976" started-at="2018-06-15T22:04:03Z" finished-at="2018-06-15T22:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createFamily -->
+        <test-method status="PASS" signature="setupAfterTest()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupAfterTest" is-config="true" duration-ms="1" started-at="2018-06-15T22:04:06Z" finished-at="2018-06-15T22:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupAfterTest -->
+        <test-method status="PASS" signature="setupAfterSuite()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupAfterSuite" is-config="true" duration-ms="0" started-at="2018-06-15T22:04:06Z" finished-at="2018-06-15T22:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupAfterSuite -->
+      </class> <!-- ameriStudent.test.Navigation -->
+    </test> <!-- CreateFamily -->
+  </suite> <!-- NavigationBasics -->
+</testng-results>

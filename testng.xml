@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="NavigationBasics" verbose="1" parallel="true">
+  <test name="CreateFamily" >
+    <classes>
+      <class name="ameriStudent.test.Navigation">
+		<methods>
+			<include name="createFamily" />
+		</methods>
+	  </class>
+    </classes>
+ </test>
+</suite>

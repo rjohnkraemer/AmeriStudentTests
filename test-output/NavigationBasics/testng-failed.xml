@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [NavigationBasics]" parallel="methods">
+  <test thread-count="5" name="CreateFamily(failed)" parallel="methods">
+    <classes>
+      <class name="ameriStudent.test.Navigation">
+        <methods>
+          <include name="setupBeforeTest"/>
+          <include name="createFamily"/>
+          <include name="setupBeforeSuite"/>
+          <include name="setupAfterSuite"/>
+          <include name="setupAfterTest"/>
+        </methods>
+      </class> <!-- ameriStudent.test.Navigation -->
+    </classes>
+  </test> <!-- CreateFamily(failed) -->
+</suite> <!-- Failed suite [NavigationBasics] -->
