@@ -1,4 +1,5 @@
 package ameriStudent.test;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -20,8 +21,8 @@ public class Navigation extends BaseTest {
 		public void searchMapByName()
 		{
 			driver.get(familyURL);
-			findWithWait(By.id("undefined-undefined-Searchbyfamilyname*")).sendKeys("test"); 	//family name input
-			findWithWait(By.partialLinkText("Test Permanent")).click();			 				//click on returned option
+			keysByID("Searchbyfamilyname", "test");	//family name input
+			findByText("Test Permanent", true).click();		 				//click on returned option
 		}
 		
 		@Test
@@ -51,6 +52,14 @@ public class Navigation extends BaseTest {
 			findWithWait(By.cssSelector("[role*=menuitem]")).click();
 			
 			
+				//confirm background check
+			WebElement element = findByText("background check");
+					//scroll before clicking
+			jse.executeScript("arguments[0].scrollIntoView(true);",element);
+			obscuredElementClick(element);
+
+			
+			findByText("Submit").click();
 		}
 		
 		@Test

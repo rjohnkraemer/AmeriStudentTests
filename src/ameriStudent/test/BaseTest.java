@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.TimeoutException;
 
@@ -22,6 +24,7 @@ public class BaseTest {
 	WebDriver driver;
 	String loginURL, dashboardURL, baseURL, logoutURL, familyURL,
 			createFamilyURL;
+	JavascriptExecutor jse;
 	
 	BaseTest()
 	{
@@ -36,6 +39,7 @@ public class BaseTest {
 	@BeforeSuite(alwaysRun = true)
 		public void setupBeforeSuite() {
 		driver = new FirefoxDriver();
+		jse = (JavascriptExecutor)driver;
 	}  
 
 	@BeforeTest(alwaysRun = true)
@@ -46,7 +50,7 @@ public class BaseTest {
 	@AfterTest(alwaysRun = true)
 	public void setupAfterTest() {
 		new WebDriverWait(driver, 5);
-		//logout();
+		logout();
 	}
 	
 	@AfterSuite(alwaysRun = true)
@@ -54,7 +58,7 @@ public class BaseTest {
 		try
 		{
 			new WebDriverWait(driver, 5);
-			//driver.quit();
+			driver.quit();
 		}
 		catch (SessionNotCreatedException e)
 		{
@@ -92,15 +96,24 @@ public class BaseTest {
 	}
 	
 	
-	public WebElement obscuredElementClick(WebElement toClick)
+	public void obscuredElementClick(WebElement element)
 	{
-		try{ toClick.click();}
-		catch (ElementClickInterceptedException e)
-		{
-			System.out.println("Caught exception for obscured element");
-		}
-		return toClick;
+		Point pt = element.getLocation();
+		int NumX = pt.getX();
+		int NumY = pt.getY();
+		
+		Actions act = new Actions(driver);   
+		act.moveByOffset(NumX+1, NumY).click().build().perform();
 	}
+	
+	public WebElement findParent(WebElement element)
+	{
+		return new WebDriverWait(driver,10).until(
+			    ExpectedConditions.presenceOfNestedElementLocatedBy(
+			            element, By.xpath("../.."))
+	    );
+	}
+	
 	
 	public WebElement findChild(WebElement parent, By locator)
 	{
@@ -156,5 +169,10 @@ public class BaseTest {
 	public WebElement findByID(String ID)
 	{
 		return findWithWait(By.cssSelector("[id*="+ ID + "]"));
+	}
+	
+	public void scrollDown()
+	{
+		jse.executeScript("window.scrollBy(0,250)", "");
 	}
 }

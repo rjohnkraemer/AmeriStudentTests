@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="NavigationBasics" duration-ms="8108" started-at="2018-06-15T22:03:58Z" finished-at="2018-06-15T22:04:06Z">
+  <suite name="NavigationBasics" duration-ms="10335" started-at="2018-07-02T21:09:49Z" finished-at="2018-07-02T21:09:59Z">
     <groups>
     </groups>
-    <test name="CreateFamily" duration-ms="8108" started-at="2018-06-15T22:03:58Z" finished-at="2018-06-15T22:04:06Z">
+    <test name="CreateFamily" duration-ms="10335" started-at="2018-07-02T21:09:49Z" finished-at="2018-07-02T21:09:59Z">
       <class name="ameriStudent.test.Navigation">
-        <test-method status="PASS" signature="setupBeforeSuite()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupBeforeSuite" is-config="true" duration-ms="2728" started-at="2018-06-15T22:03:55Z" finished-at="2018-06-15T22:03:58Z">
+        <test-method status="PASS" signature="setupBeforeSuite()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupBeforeSuite" is-config="true" duration-ms="3274" started-at="2018-07-02T21:09:45Z" finished-at="2018-07-02T21:09:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeSuite -->
-        <test-method status="PASS" signature="setupBeforeTest()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupBeforeTest" is-config="true" duration-ms="5113" started-at="2018-06-15T22:03:58Z" finished-at="2018-06-15T22:04:03Z">
+        <test-method status="PASS" signature="setupBeforeTest()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupBeforeTest" is-config="true" duration-ms="5988" started-at="2018-07-02T21:09:49Z" finished-at="2018-07-02T21:09:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeTest -->
-        <test-method status="PASS" signature="createFamily()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="createFamily" duration-ms="2976" started-at="2018-06-15T22:04:03Z" finished-at="2018-06-15T22:04:06Z">
+        <test-method status="PASS" signature="createFamily()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="createFamily" duration-ms="3466" started-at="2018-07-02T21:09:55Z" finished-at="2018-07-02T21:09:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createFamily -->
-        <test-method status="PASS" signature="setupAfterTest()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupAfterTest" is-config="true" duration-ms="1" started-at="2018-06-15T22:04:06Z" finished-at="2018-06-15T22:04:06Z">
+        <test-method status="PASS" signature="setupAfterTest()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupAfterTest" is-config="true" duration-ms="863" started-at="2018-07-02T21:09:58Z" finished-at="2018-07-02T21:09:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAfterTest -->
-        <test-method status="PASS" signature="setupAfterSuite()[pri:0, instance:ameriStudent.test.Navigation@1563da5]" name="setupAfterSuite" is-config="true" duration-ms="0" started-at="2018-06-15T22:04:06Z" finished-at="2018-06-15T22:04:06Z">
+        <test-method status="PASS" signature="setupAfterSuite()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupAfterSuite" is-config="true" duration-ms="160" started-at="2018-07-02T21:09:59Z" finished-at="2018-07-02T21:09:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAfterSuite -->
