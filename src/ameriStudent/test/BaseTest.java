@@ -49,8 +49,8 @@ public class BaseTest {
 	
 	@AfterTest(alwaysRun = true)
 	public void setupAfterTest() {
-		new WebDriverWait(driver, 5);
-		logout();
+		//new WebDriverWait(driver, 5);
+		logoutQuick();
 	}
 	
 	@AfterSuite(alwaysRun = true)
@@ -110,7 +110,7 @@ public class BaseTest {
 	{
 		return new WebDriverWait(driver,10).until(
 			    ExpectedConditions.presenceOfNestedElementLocatedBy(
-			            element, By.xpath("../.."))
+			            element, By.xpath(".."))
 	    );
 	}
 	
@@ -126,6 +126,11 @@ public class BaseTest {
 	public WebElement findByText(String text)
 	{
 		return findWithWait(By.xpath("//*[contains(text(), '" + text + "')]"));
+	}
+	
+	public WebElement findByText(String text, String type)
+	{
+		return findWithWait(By.xpath("//" + type + "[contains(text(), '" + text + "')]"));
 	}
 	
 	public WebElement findByText(String text, Boolean visible)

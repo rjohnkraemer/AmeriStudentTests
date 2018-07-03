@@ -6,7 +6,7 @@
       <class name="ameriStudent.test.Navigation">
         <methods>
           <include name="setupBeforeTest"/>
-          <include name="createFamily"/>
+          <include name="DeleteFamily"/>
           <include name="setupBeforeSuite"/>
           <include name="setupAfterSuite"/>
           <include name="setupAfterTest"/>

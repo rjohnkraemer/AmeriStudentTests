@@ -1,33 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="NavigationBasics" duration-ms="10335" started-at="2018-07-02T21:09:49Z" finished-at="2018-07-02T21:09:59Z">
+  <suite name="Default suite" duration-ms="20600" started-at="2018-07-03T21:15:03Z" finished-at="2018-07-03T21:15:24Z">
     <groups>
     </groups>
-    <test name="CreateFamily" duration-ms="10335" started-at="2018-07-02T21:09:49Z" finished-at="2018-07-02T21:09:59Z">
+    <test name="Default test" duration-ms="20600" started-at="2018-07-03T21:15:03Z" finished-at="2018-07-03T21:15:24Z">
       <class name="ameriStudent.test.Navigation">
-        <test-method status="PASS" signature="setupBeforeSuite()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupBeforeSuite" is-config="true" duration-ms="3274" started-at="2018-07-02T21:09:45Z" finished-at="2018-07-02T21:09:49Z">
+        <test-method status="PASS" signature="setupBeforeSuite()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupBeforeSuite" is-config="true" duration-ms="2732" started-at="2018-07-03T21:15:00Z" finished-at="2018-07-03T21:15:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeSuite -->
-        <test-method status="PASS" signature="setupBeforeTest()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupBeforeTest" is-config="true" duration-ms="5988" started-at="2018-07-02T21:09:49Z" finished-at="2018-07-02T21:09:55Z">
+        <test-method status="PASS" signature="setupBeforeTest()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupBeforeTest" is-config="true" duration-ms="4826" started-at="2018-07-03T21:15:03Z" finished-at="2018-07-03T21:15:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeTest -->
-        <test-method status="PASS" signature="createFamily()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="createFamily" duration-ms="3466" started-at="2018-07-02T21:09:55Z" finished-at="2018-07-02T21:09:58Z">
+        <test-method status="FAIL" signature="DeleteFamily()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="DeleteFamily" duration-ms="15531" started-at="2018-07-03T21:15:08Z" finished-at="2018-07-03T21:15:24Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //button[contains(text(), 'Delete')] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //button[contains(text(), 'Delete')] (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+at ameriStudent.test.BaseTest.findWithWait(BaseTest.java:157)
+at ameriStudent.test.BaseTest.findWithWait(BaseTest.java:148)
+at ameriStudent.test.BaseTest.findByText(BaseTest.java:133)
+at ameriStudent.test.Navigation.DeleteFamily(Navigation.java:105)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //button[contains(text(), 'Delete')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T15:15:08.936Z'
+System info: host: 'DESKTOP-58DHS7N', ip: '192.168.1.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+at java.util.Optional.orElseThrow(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createFamily -->
-        <test-method status="PASS" signature="setupAfterTest()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupAfterTest" is-config="true" duration-ms="863" started-at="2018-07-02T21:09:58Z" finished-at="2018-07-02T21:09:59Z">
+        </test-method> <!-- DeleteFamily -->
+        <test-method status="PASS" signature="setupAfterTest()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupAfterTest" is-config="true" duration-ms="219" started-at="2018-07-03T21:15:24Z" finished-at="2018-07-03T21:15:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAfterTest -->
-        <test-method status="PASS" signature="setupAfterSuite()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupAfterSuite" is-config="true" duration-ms="160" started-at="2018-07-02T21:09:59Z" finished-at="2018-07-02T21:09:59Z">
+        <test-method status="PASS" signature="setupAfterSuite()[pri:0, instance:ameriStudent.test.Navigation@11438d26]" name="setupAfterSuite" is-config="true" duration-ms="183" started-at="2018-07-03T21:15:24Z" finished-at="2018-07-03T21:15:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAfterSuite -->
       </class> <!-- ameriStudent.test.Navigation -->
-    </test> <!-- CreateFamily -->
-  </suite> <!-- NavigationBasics -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
